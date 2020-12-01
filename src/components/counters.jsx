@@ -59,7 +59,7 @@ class Counters extends Component {
         return (
         <div>
             <button onClick={ this.handleGeneralReset } className="btn btn-small btn-primary m-2">General Reset</button>
-            <Counter counter={{id:20, value: 20}}/>
+           
             { counters.map(
                 counter => 
                 <Counter 
