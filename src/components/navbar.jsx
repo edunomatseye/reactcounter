@@ -5,9 +5,23 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-light bg-light">
-                <a className="navbar-brand" href="#">
-                    Navbar <span className="badge badge-pill badge-secondary">{this.props.totalCounters}</span>
-                </a>
+                <div className="navbar-brand" >
+            Navbar  <span className="badge badge-pill badge-secondary">
+                        {this.props.totalCounters} 
+                    </span>
+
+                    <span className="badge badge-pill badge-success">
+                        {this.props?.positiveCounts()}
+                    </span>
+
+                    <span className="badge badge-pill badge-danger">
+                        {this.props?.negativeCounts()}
+                    </span>
+
+                    <span className="badge badge-pill badge-warning">
+                        {this.props?.neutralCounts()}
+                    </span>
+                </div>
             </nav>
         )
     }
