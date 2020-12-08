@@ -21,6 +21,13 @@ class App extends Component {
     console.log('Delete something of value', id)
   };
 
+  handleAddition = () => {
+    let counter = {id: this.state.counters.length + 1, value: 0}
+    let counters = [...this.state.counters, counter];
+    this.setState({counters});
+    console.log('New counter added successfully with ID: ')
+  };
+
   handleIncrement = (id) => {
     console.log("Incremental clicked", id);
 
@@ -90,6 +97,7 @@ class App extends Component {
             onDecrement={id =>this.handleDecrement(id)}
             onReset={id =>this.handleReset(id)}
             onGeneralReset={this.handleGeneralReset}
+            onAddNew={this.handleAddition}
             //onDelete={(c) => this.handleDelete(c)}
           />
         </main>

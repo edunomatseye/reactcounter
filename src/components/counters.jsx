@@ -23,6 +23,12 @@ class Counters extends Component {
           General Reset
         </button>
 
+        <button
+          onClick={this.props.onAddNew}
+          className="btn btn-small btn-primary m-2">
+          Add New
+        </button>
+
         
         {counters.map((counter) => (
           <Counter
